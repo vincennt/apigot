@@ -17,7 +17,7 @@ $(function() {
 
             $("form").submit(function(e) {
                 e.preventDefault()
-                    //fonction a exe.
+                const inputMatches = dataAll.filter((matchLetter) = matchLetter($("input:text").val()));
 
 
             })
@@ -29,3 +29,5 @@ $(function() {
 
 
 });
+
+// $("input:text").val()
