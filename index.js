@@ -1,31 +1,31 @@
+var dataAll = []
 $(function() {
     $.ajax({
+
+
+
+
         url: 'https://thronesapi.com/api/v2/Characters',
-        success: function(data, ) {
-            // var allData = data
+        success: function(data) {
+
             data.forEach(function(character, index) {
+                dataAll.push(character.fullName)
                 $(".here").append(`<div class= "style-div col-4"><img class="size" src=${character.imageUrl} <p> ${character.fullName }</p><p>${character.title}</p></div>`)
-
-
-                // function filter(fullName) {
-                //     const filteredNames = character.filter(function(data) {
-                //         console.log(filteredNames, fullName);
-                //     })
-
-                // }
 
             });
 
 
+            $("form").submit(function(e) {
+                e.preventDefault()
+                    //fonction a exe.
 
+
+            })
 
         }
+
 
     });
 
 
 });
-
-function filter() {
-    console.log("hi");
-}
